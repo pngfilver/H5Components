@@ -1,0 +1,22 @@
+/* 散点图类的样式 */
+.h5_component_point {
+}
+.h5_component_point .point {
+    /*display: block;*/
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 50%;
+}
+.h5_component_point .name {
+    font-size: 22px;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
+
+}
+.h5_component_point .rate {
+    font-size: .8em;
+}

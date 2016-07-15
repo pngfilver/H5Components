@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <!-- 需要基本图文组件作为依赖 -->
+    <script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+    <link rel="stylesheet" href="../css/H5ComponentBase.css">
+
+    <script type="text/javascript" src="../js/H5ComponentPoint.js"></script>
+    <link rel="stylesheet" href="../css/H5ComponentPoint.css">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        .phone {
+            width: 340px;
+            height: 540px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -270px 0 0 -170px;
+            background: #fff;
+        }
+        .h5_component_base {
+            transition: all 1s;
+        }
+        .h5_component_base_load {
+            opacity: 1;
+        }
+        .h5_component_base_leave {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="phone">
+
+   </div>
+
+   <script type="text/javascript">
+       var cfg = {
+           type: 'point',
+           width: 300,
+           height: 306,
+           data: [
+               ['A项', .4 , 'green'],
+               ['B项', .3 , 'red','-10%' ,'120%'],
+               ['C项', .2 , 'yellow','-5%','-60%'],
+               ['D项', .22 , '#3456ff','100%','-60%']
+           ],
+           css: {
+               bottom: 180,
+               opacity: 0
+           },
+           animateIn: {  // 组件载入时样式
+               opacity: 1
+           },
+           animateOut: {  // 组件载出时样式
+               opacity: 0
+           },
+           center: true
+       };
+       var h5 = new H5ComponentPoint('myName', cfg);
+       $(".phone").append(h5);
+
+       var leave = true;
+       $("body").click(function() {
+           leave = !leave;
+           $(".h5_component").trigger( leave ? "onLeave" : "onLoad");
+           $(".point").trigger( leave ? "onLeave" : "onLoad");
+       });
+   </script>
+
+</body>
+</html>

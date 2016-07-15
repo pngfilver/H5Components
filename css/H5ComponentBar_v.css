@@ -1,0 +1,58 @@
+/* 垂直柱图类的样式 */
+.h5_component_bar {
+    /*position: relative;*/
+}
+.h5_component_bar .line {
+    height: 100%;
+    width: 40px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    float: left;
+    position: relative;
+}
+.h5_component_bar .name {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    position: absolute;
+    bottom: -20px;
+}
+.h5_component_bar .rate {
+    width: 15px;
+    left: 50%;
+    margin-left: -7.5px;
+    position: absolute;
+    bottom: 0;
+}
+.h5_component_bar .rate .bg {
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #99c0ff;
+    border-radius: 3px;
+}
+.h5_component_bar .per {
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    color: #99c0ff;
+    position: absolute;
+    opacity: 0;
+}
+.h5_component_bar_load .rate .bg{
+    -webkit-transition: all 1s .5s;
+    height: 100%;
+}
+.h5_component_bar_leave .rate .bg{
+    height: 0%;
+}
+.h5_component_bar_load .per {
+    -webkit-transition: all 1s 1.5s;
+    opacity: 1;
+}
+.h5_component_bar_leave .per {
+    opacity: 0;
+}

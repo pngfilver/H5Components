@@ -34,7 +34,7 @@ var H5ComponentPie = function(name, cfg) {
     canvas.height = context.height = height;
     component.append(canvas);
 
-    var colors = ['red', 'green', 'orange', 'gray']; // 备用颜色
+    var colors = ['#5256e8', '#ff7676', '#29bd28', '#e4b11b', '#ff7676','#da29cb']; // 备用颜色
     var sAngel = 1.5 * Math.PI;  // 设置开始的角度在12点的位置
     var eAngel = 0;  // 结束角度
     var aAngel = 2 * Math.PI;  // 100%的圆的角度
@@ -56,7 +56,7 @@ var H5ComponentPie = function(name, cfg) {
 
         // 加入所有的项目文本以及百分比
         var text = $('<div class="text"></div>');
-        text.text(item[0]);
+        text.text(item[0]).css('opacity',0);
         var per = $('<div class="per"></div>');
         per.text(item[1]*100 + '%');
         text.append(per);
@@ -73,7 +73,6 @@ var H5ComponentPie = function(name, cfg) {
         }else {
             text.css('bottom', (height-y)/2 + 2);
         }
-        text.css('opacity',0);
         component.append(text);
     }
 

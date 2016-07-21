@@ -29,7 +29,7 @@ var H5ComponentBase = function(name, cfg) {
            component.addClass("h5_component_" + cfg.type + "_leave").removeClass("h5_component_" + cfg.type + "_load");
            cfg.animateOut && component.animate( cfg.animateOut );
        }, cfg.delay || 0);
-
+     
         return false;
     });
     component.on('onLoad', function() {

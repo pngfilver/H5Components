@@ -36,9 +36,9 @@
         .h5_page {
             background: url('imgs/page_bg.png');
         }
-        .h5_page_face {
-            background: url('imgs/face_bg.png');
-        }
+        /*.h5_page_face {*/
+            /*background: url('imgs/face_bg.png');*/
+        /*}*/
         .h5_component_name_slogan {
             -webkit-animation: rock 2s infinite 2s;
         }
@@ -95,52 +95,52 @@
                     },
                     delay: 500
                 })
-            };
+            }
 
-            h5.addPage('face')
-                    .addComponent('topic', {
-                        width: 395,
-                        height: 130,
-                        bg: 'imgs/face_logo.png',
-                        center: true,
-                        css: { opacity: 0 },
-                        animateIn: { top: 100, opacity: 1 },
-                        animateOut: { top: 0, opacity: 0 }
-                    })
-                    .addComponent('slogan', {
-                        width: 365,
-                        height: 99,
-                        bg: 'imgs/face_slogan.png',
-                        center: true,
-                        css: { opacity: 0, top: 180 },
-                        animateIn: { left: '50%', opacity: 1 },
-                        animateOut: { left: '50%', opacity: 0 },
-                        delay: 500
-                    })
-                    .addComponent('face_img_left', {
-                        width: 370,
-                        height: 493,
-                        bg: 'imgs/face_img_left.png',
-                        css: {opacity: 0, left:-50, bottom:-50},
-                        animateIn: {opacity: 1, left:0, bottom:0},
-                        animateOut: {opacity: 0, left:-50, bottom:-50},
-                        delay: 1000
-                    })
-                    .addComponent('face_img_right', {
-                        width: 276,
-                        height: 449,
-                        bg: 'imgs/face_img_right.png',
-                        css: {opacity: 0, right:-50, bottom:-50},
-                        animateIn: {opacity: 1, right:0, bottom:0},
-                        animateOut: {opacity: 0, right:-50, bottom:-50},
-                        delay: 1000
-                    })
-            .addPage()
+//            h5.addPage('face')
+//                    .addComponent('topic', {
+//                        width: 395,
+//                        height: 130,
+//                        bg: 'imgs/face_logo.png',
+//                        center: true,
+//                        css: { opacity: 0 },
+//                        animateIn: { top: 100, opacity: 1 },
+//                        animateOut: { top: 0, opacity: 0 }
+//                    })
+//                    .addComponent('slogan', {
+//                        width: 365,
+//                        height: 99,
+//                        bg: 'imgs/face_slogan.png',
+//                        center: true,
+//                        css: { opacity: 0, top: 180 },
+//                        animateIn: { left: '50%', opacity: 1 },
+//                        animateOut: { left: '50%', opacity: 0 },
+//                        delay: 500
+//                    })
+//                    .addComponent('face_img_left', {
+//                        width: 370,
+//                        height: 493,
+//                        bg: 'imgs/face_img_left.png',
+//                        css: {opacity: 0, left:-50, bottom:-50},
+//                        animateIn: {opacity: 1, left:0, bottom:0},
+//                        animateOut: {opacity: 0, left:-50, bottom:-50},
+//                        delay: 1000
+//                    })
+//                    .addComponent('face_img_right', {
+//                        width: 276,
+//                        height: 449,
+//                        bg: 'imgs/face_img_right.png',
+//                        css: {opacity: 0, right:-50, bottom:-50},
+//                        animateIn: {opacity: 1, right:0, bottom:0},
+//                        animateOut: {opacity: 0, right:-50, bottom:-50},
+//                        delay: 1000
+//                    })
+            h5.addPage()
                     .addComponent('caption', {
-                       text: '核心理念'
+                       text: '小编寄语'
                     })
                     .addComponent('text', {
-                        text: 'IT教育==只学有用的',
+                        text: '一些常用的图表组件',
                         width: 500,
                         height: 30,
                         center: true,
@@ -150,25 +150,285 @@
                         animateIn: {opacity:1, top:160},
                         animateOut: {opacity:0, top:240}
                     })
-            .addPage('tail')
-                    .addComponent('logo', {
-                        width: 359,
-                        height: 129,
-                        bg: 'imgs/tail_logo.png',
-                        center: true,
-                        css: { top:240, opacity: 0 },
-                        animateIn: { top: 210, opacity: 1 },
-                        animateOut: { top: 240, opacity: 0 }
+            .addPage()
+                    .addComponent('caption', {
+                        text: '折线图'
+                    }) // polyline
+                    .addComponent('polyline', {
+                        type: 'polyline',
+                        width: 630,
+                        height: 400,
+                        data: [
+                            ['JS', .56 , '#ff7676'],
+                            ['JQuery', .46 , '#ff7676'],
+                            ['HTML', .50 , '#ff7676'],
+                            ['CSS', .60 , '#ff7676'],
+                            ['Vue', .35 , '#ff7676'],
+                            ['Angular', .4 , '#ff7676']
+                        ],
+                        css: {
+                            top: 180,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
                     })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '饼图'
+                    })  // pie
+                    .addComponent('pie', {
+                        type: 'pie',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JS', .05],
+                            ['Angular', .35],
+                            ['JQuery', .1],
+                            ['HTML', .2],
+                            ['CSS', .1],
+                            ['Vue', .2]
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '水平柱图'
+                    })  // bar
+                    .addComponent('bar', {
+                        type: 'bar',
+                        width: 530,
+                        height: 600,
+                        data: [
+                            ['JavaScript', .49 , '#ff7676'],
+                            ['HTML/CSS', .3],
+                            ['Angular', .2],
+                            ['Vue', .22],
+                            ['bootstrap', .4],
+                            ['react', .39],
+                            ['jquery', .2]
+                        ],
+                        css: {
+                            top: 180,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '垂直柱图'
+                    })  //bar_v
+                    .addComponent('bar_v', {
+                        type: 'bar_v',
+                        width: 530,
+                        height: 600,
+                        data: [
+                            ['js', .49 , '#ff7676'],
+                            ['HTML', .59],
+                            ['css', .48],
+                            ['Vue', .22],
+                            ['jq', .4],
+                            ['Angular', .3]
+                        ],
+                        css: {
+                            bottom: 280,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            bottom: 260
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            bottom: 280
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '雷达图'
+                    })   // radar
+                    .addComponent('radar', {
+                        type: 'radar',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JS', .56 , '#ff7676'],
+                            ['JQuery', .46 , '#ff7676'],
+                            ['HTML', .50 , '#ff7676'],
+                            ['CSS', .60 , '#ff7676'],
+                            ['Vue', .35 , '#ff7676']
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '环形图'
+                    })   // ring
+                    .addComponent('ring', {
+                        type: 'ring',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JavaScript', .6, '#ff7676']
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+                    .addComponent('ring', {
+                        type: 'ring',
+                        width: 200,
+                        height: 200,
+                        data: [
+                            ['HTML', .8, '#ff7676']
+                        ],
+                        css: {
+                            top: 500,
+                            left: 0,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            left: 15,
+                            top: 520
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            left: 0,
+                            top: 500
+                        }
+                    })
+                    .addComponent('ring', {
+                        type: 'ring',
+                        width: 200,
+                        height: 200,
+                        data: [
+                            ['CSS', .4, '#ff7676']
+                        ],
+                        css: {
+                            top: 500,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 520
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 500
+                        },
+                        center: true
+                    })
+                    .addComponent('ring', {
+                        type: 'ring',
+                        width: 200,
+                        height: 200,
+                        data: [
+                            ['HTML', .8, '#ff7676']
+                        ],
+                        css: {
+                            top: 500,
+                            right: 0,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            right: 15,
+                            top: 520
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            right: 0,
+                            top: 500
+                        }
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '散点图'
+                    })  // point
+                    .addComponent('point', {
+                        type: 'point',
+                        width: 300,
+                        height: 306,
+                        data: [
+                            ['JS', .4 , 'green'],
+                            ['CSS', .3 , 'red','-10%' ,'120%'],
+                            ['HTML', .2 , 'yellow','-5%','-60%'],
+                            ['???', .22 , '#3456ff','100%','-60%']
+                        ],
+                        css: {
+                            top: 350,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0
+                        },
+                        center: true
+                    })
+            .addPage('tail')
                     .addComponent('slogan', {
-                        width: 314,
-                        height: 46,
-                        bg: 'imgs/tail_slogan.png',
+                        text: '看完了撒，粑粑快给零花钱！！',
+                        width: 500,
+                        height: 30,
                         center: true,
-                        css: { top:280, opacity: 0 },
-                        animateIn: { left: '50%', opacity: 1 },
-                        animateOut: { left: 0, opacity: 0 },
-                        delay: 500
+                        css: {
+                            opacity: 0, textAlign: 'center', color: 'red', fontSize: '26px'
+                        },
+                        animateIn: {opacity:1, top:160},
+                        animateOut: {opacity:0, top:240}
                     })
                     .addComponent('share', {
                         width: 128,
@@ -189,7 +449,7 @@
                         }
                     })
 
-                    .load(3)
+                    .load(8)
         });
     </script>
 

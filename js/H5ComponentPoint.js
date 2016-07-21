@@ -26,22 +26,13 @@ var H5ComponentPoint = function(name, cfg) {
             top: (1 - item[1] / base) *50 + '%',
             zIndex: cfg.data.length - idx
         });
-        point.on('onLoad', function() {
-            if(item[3] !== undefined && item[4] !== undefined) {
-                point.animate({
-                    left: item[3],
-                    top: item[4]
-                }, 1500);
-            }
-        }).on('onLeave', function() {
+        if(item[3] !== undefined && item[4] !== undefined) {
             point.animate({
-                left: (1 - item[1] / base) *50 + '%',
-                top: (1 - item[1] / base) *50 + '%'
-            }, 800);
-        });
-
-
-
+                left: item[3],
+                top: item[4]
+            }, 1500);
+        }
+       
         component.append(point);
     } );
 

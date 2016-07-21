@@ -19,7 +19,7 @@ var H5ComponentPolyline = function(name, cfg) {
     var step = 10;
     context.beginPath();
     context.strokeStyle = '#ccc';
-    context.lineWidth = 1;
+    context.lineWidth = 2;
     window.context = context;
     for(var i=0; i<step+1; i++) {
         var y = height / step * i;

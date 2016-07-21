@@ -212,6 +212,35 @@
                     })
             .addPage()
                     .addComponent('caption', {
+                        text: '雷达图'
+                    })   // radar
+                    .addComponent('radar', {
+                        type: 'radar',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JS', .56 , '#ff7676'],
+                            ['JQuery', .46 , '#ff7676'],
+                            ['HTML', .50 , '#ff7676'],
+                            ['CSS', .60 , '#ff7676'],
+                            ['Vue', .35 , '#ff7676']
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
                         text: '水平柱图'
                     })  // bar
                     .addComponent('bar', {
@@ -268,35 +297,6 @@
                         animateOut: {  // 组件载出时样式
                             opacity: 0,
                             bottom: 200
-                        },
-                        center: true
-                    })
-            .addPage()
-                    .addComponent('caption', {
-                        text: '雷达图'
-                    })   // radar
-                    .addComponent('radar', {
-                        type: 'radar',
-                        width: 400,
-                        height: 400,
-                        data: [
-                            ['JS', .56 , '#ff7676'],
-                            ['JQuery', .46 , '#ff7676'],
-                            ['HTML', .50 , '#ff7676'],
-                            ['CSS', .60 , '#ff7676'],
-                            ['Vue', .35 , '#ff7676']
-                        ],
-                        css: {
-                            top: 200,
-                            opacity: 0
-                        },
-                        animateIn: {  // 组件载入时样式
-                            opacity: 1,
-                            top: 200
-                        },
-                        animateOut: {  // 组件载出时样式
-                            opacity: 0,
-                            top: 180
                         },
                         center: true
                     })
@@ -449,7 +449,7 @@
                         }
                     })
 
-                    .load(7)
+                    .load()
         });
     </script>
 

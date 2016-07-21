@@ -20,16 +20,23 @@ var H5ComponentBase = function(name, cfg) {
         left: '50%'
     });
     // 后期还有很多自定义参数……
+    if(typeof cfg.onclick === 'function') {
+        component.on('click', cfg.onclick);
+    }
 
     component.on('onLeave', function() {
-        $(this).addClass("h5_component_" + cfg.type + "_leave").removeClass("h5_component_" + cfg.type + "_load");
-        cfg.animateOut && $(this).animate( cfg.animateOut );
+       setTimeout(function() {
+           component.addClass("h5_component_" + cfg.type + "_leave").removeClass("h5_component_" + cfg.type + "_load");
+           cfg.animateOut && component.animate( cfg.animateOut );
+       }, cfg.delay || 0);
 
         return false;
     });
     component.on('onLoad', function() {
-        $(this).addClass("h5_component_" + cfg.type + "_load").removeClass("h5_component_" + cfg.type + "_leave");
-        cfg.animateIn && $(this).animate( cfg.animateIn );
+        setTimeout(function() {
+            component.addClass("h5_component_" + cfg.type + "_load").removeClass("h5_component_" + cfg.type + "_leave");
+            cfg.animateIn && component.animate( cfg.animateIn );
+        }, cfg.delay || 0);
 
         return false;
     });

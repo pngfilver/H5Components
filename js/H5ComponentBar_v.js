@@ -10,10 +10,11 @@ var H5ComponentBar_v = function(name, cfg) {
         var rate = $("<div class='rate'></div>");
         var per = $("<div class='per'></div>");
 
-        var height = item[1]*100 + '%';
+        var height = (item[1]*100 >> 0) + '%';
         var bgStyle = '';
         if(item[2]) {
             bgStyle = 'style="background-color:' + item[2] + '"';
+            per.css('color', item[2]);
         }
 
         rate.height(height).html("<div class='bg' "+ bgStyle +"></div>");

@@ -19,7 +19,7 @@
     bottom: -20px;
 }
 .h5_component_bar_v .rate {
-    width: 15px;
+    width: 18px;
     left: 50%;
     margin-left: -7.5px;
     position: absolute;
@@ -41,6 +41,7 @@
     color: #99c0ff;
     position: absolute;
     opacity: 0;
+    font-size: 1.2em;
 }
 .h5_component_bar_v_load .rate .bg{
     -webkit-transition: all 1s .5s;

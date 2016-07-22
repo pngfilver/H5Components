@@ -14,7 +14,7 @@
     text-align: center;
 }
 .h5_component_bar .rate {
-   height: 15px;
+   height: 16px;
     margin-left: 5px;
     position: relative;
     float: left;
@@ -32,8 +32,9 @@
     width: 20px;
     color: #99c0ff;
     float: left;
-    margin-left: 5px;
+    margin-left: 10px;
     opacity: 0;
+    font-size: 1.2em;
 }
 .h5_component_bar_load .rate .bg{
     -webkit-transition: all 1s .5s;

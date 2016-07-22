@@ -36,9 +36,6 @@
         .h5_page {
             background: url('imgs/page_bg.png');
         }
-        /*.h5_page_face {*/
-            /*background: url('imgs/face_bg.png');*/
-        /*}*/
         .h5_component_name_slogan {
             -webkit-animation: rock 2s infinite 2s;
         }
@@ -71,6 +68,17 @@
         @-webkit-keyframes back {
             50% { top: 20px }
         }
+        .h5_component_name_saying {
+            color: #fff;
+            background: rgba(0,0,0,0.25);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .h5_component_name_arrow_down {
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            border-top:15px solid rgba(0,0,0,0.25);
+        }
     </style>
 
     <!-- 主要逻辑 -->
@@ -97,44 +105,6 @@
                 })
             }
 
-//            h5.addPage('face')
-//                    .addComponent('topic', {
-//                        width: 395,
-//                        height: 130,
-//                        bg: 'imgs/face_logo.png',
-//                        center: true,
-//                        css: { opacity: 0 },
-//                        animateIn: { top: 100, opacity: 1 },
-//                        animateOut: { top: 0, opacity: 0 }
-//                    })
-//                    .addComponent('slogan', {
-//                        width: 365,
-//                        height: 99,
-//                        bg: 'imgs/face_slogan.png',
-//                        center: true,
-//                        css: { opacity: 0, top: 180 },
-//                        animateIn: { left: '50%', opacity: 1 },
-//                        animateOut: { left: '50%', opacity: 0 },
-//                        delay: 500
-//                    })
-//                    .addComponent('face_img_left', {
-//                        width: 370,
-//                        height: 493,
-//                        bg: 'imgs/face_img_left.png',
-//                        css: {opacity: 0, left:-50, bottom:-50},
-//                        animateIn: {opacity: 1, left:0, bottom:0},
-//                        animateOut: {opacity: 0, left:-50, bottom:-50},
-//                        delay: 1000
-//                    })
-//                    .addComponent('face_img_right', {
-//                        width: 276,
-//                        height: 449,
-//                        bg: 'imgs/face_img_right.png',
-//                        css: {opacity: 0, right:-50, bottom:-50},
-//                        animateIn: {opacity: 1, right:0, bottom:0},
-//                        animateOut: {opacity: 0, right:-50, bottom:-50},
-//                        delay: 1000
-//                    })
             h5.addPage()
                     .addComponent('caption', {
                        text: '小编寄语'
@@ -148,7 +118,48 @@
                             opacity: 0, textAlign: 'center', color: 'red', fontSize: '26px'
                         },
                         animateIn: {opacity:1, top:130},
-                        animateOut: {opacity:0, top:200}
+                        animateOut: {opacity:0, top:200},
+                        delay: 500
+                    })
+                    .addComponent('saying', {
+                        width:521,
+                        text: "这里展示的主要是一些图表组件,包括散点图|柱图|折线图|雷达图|饼图|环形图，" +
+                        "源代码放在github上,感兴趣的小伙伴欢迎fork唷\<w\>",
+                        css: {
+                            opacity: 0,
+                            bottom: 250,
+                            left: -100
+                        },
+                        center: true,
+                        animateIn: {opacity:1, bottom:220},
+                        animateOut: {opacity:0, bottom:250},
+                        delay: 1500
+                    })
+                    .addComponent('arrow_down', {
+                        width:0,
+                        height: 0,
+                        css: {
+                            opacity: 0,
+                            bottom: 250,
+                            left: -100
+                        },
+                        animateIn: {opacity:1, bottom:206,left:'30%'},
+                        animateOut: {opacity:0, bottom:250},
+                        delay: 1500
+                    })
+                    .addComponent('author', {
+                        width:280,
+                        height: 260,
+                        bg: 'imgs/avatar.png',
+                        css: {
+                            opacity: 0,
+                            bottom: 60,
+                            left: -100
+                        },
+                        center: true,
+                        animateIn: {opacity:1, bottom:60,left: '30%'},
+                        animateOut: {opacity:0, bottom:60, left: -100},
+                        delay: 1000
                     })
             .addPage()
                     .addComponent('caption', {
@@ -452,7 +463,7 @@
                         }
                     })
 
-                    .load(8)
+                    .load(1)
         });
     </script>
 

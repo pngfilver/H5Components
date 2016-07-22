@@ -1,5 +1,6 @@
 /* 散点图类的样式 */
 .h5_component_point {
+    color: #fff;
 }
 .h5_component_point .point {
     /*display: block;*/
@@ -19,4 +20,12 @@
 }
 .h5_component_point .rate {
     font-size: .8em;
+}
+/* 动画效果 */
+.point_shadow {
+    box-shadow: 0 0 0 12px rgba(255, 118, 118, .1);
+    -webkit-animation: color 2s infinite 0.5s;
+}
+@-webkit-keyframes color {
+    50% { box-shadow: 0 0 0 0px rgba(255, 118, 118, .5); }
 }

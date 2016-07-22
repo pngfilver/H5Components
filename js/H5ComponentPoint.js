@@ -10,7 +10,9 @@ var H5ComponentPoint = function(name, cfg) {
     $.each( cfg.data, function(idx, item) {
 
         var point = $("<div class='point point_" + idx + "'>");
-
+        if(idx == 0) {
+            point.addClass('point_shadow');
+        }
         var name = $("<div class='name'>" + item[0] +"</div>");
         var rate = $("<div class='rate'>"+ item[1]*100 +"%</div>");
         name.append(rate);
@@ -32,10 +34,9 @@ var H5ComponentPoint = function(name, cfg) {
                 top: item[4]
             }, 1500);
         }
-       
+               
         component.append(point);
     } );
-
 
     return component;
 };

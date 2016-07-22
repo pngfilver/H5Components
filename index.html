@@ -139,106 +139,45 @@
                     .addComponent('caption', {
                        text: '小编寄语'
                     })
-                    .addComponent('text', {
-                        text: '一些常用的图表组件',
+                    .addComponent('slogan', {
+                        text: '小咩有话要说',
                         width: 500,
                         height: 30,
                         center: true,
                         css: {
                             opacity: 0, textAlign: 'center', color: 'red', fontSize: '26px'
                         },
-                        animateIn: {opacity:1, top:160},
-                        animateOut: {opacity:0, top:240}
+                        animateIn: {opacity:1, top:130},
+                        animateOut: {opacity:0, top:200}
                     })
             .addPage()
                     .addComponent('caption', {
-                        text: '折线图'
-                    }) // polyline
-                    .addComponent('polyline', {
-                        type: 'polyline',
-                        width: 630,
-                        height: 400,
+                        text: '散点图'
+                    })  // point
+                    .addComponent('point', {
+                        type: 'point',
+                        width: 200,
+                        height: 200,
                         data: [
-                            ['JS', .56 , '#ff7676'],
-                            ['JQuery', .46 , '#ff7676'],
-                            ['HTML', .50 , '#ff7676'],
-                            ['CSS', .60 , '#ff7676'],
-                            ['Vue', .35 , '#ff7676'],
-                            ['Angular', .4 , '#ff7676']
-                        ],
-                        css: {
-                            top: 180,
-                            opacity: 0
-                        },
-                        animateIn: {  // 组件载入时样式
-                            opacity: 1,
-                            top: 200
-                        },
-                        animateOut: {  // 组件载出时样式
-                            opacity: 0,
-                            top: 180
-                        },
-                        center: true
-                    })
-            .addPage()
-                    .addComponent('caption', {
-                        text: '饼图'
-                    })  // pie
-                    .addComponent('pie', {
-                        type: 'pie',
-                        width: 400,
-                        height: 400,
-                        data: [
-                            ['JS', .05],
-                            ['Angular', .35],
-                            ['JQuery', .1],
-                            ['HTML', .2],
-                            ['CSS', .1],
-                            ['Vue', .2]
+                            ['JavaScript', .4 , '#ff7676'],
+                            ['CSS', .3 , '#4dfb70','-10%' ,'120%'],
+                            ['HTML', .2 , '#99c1ff','-5%','-60%'],
+                            ['???', .22 , '#ffc447','100%','-60%']
                         ],
                         css: {
                             top: 200,
                             opacity: 0
                         },
                         animateIn: {  // 组件载入时样式
-                            opacity: 1,
-                            top: 200
+                            opacity: 1
                         },
                         animateOut: {  // 组件载出时样式
-                            opacity: 0,
-                            top: 180
-                        },
-                        center: true
-                    })
-            .addPage()
-                    .addComponent('caption', {
-                        text: '雷达图'
-                    })   // radar
-                    .addComponent('radar', {
-                        type: 'radar',
-                        width: 400,
-                        height: 400,
-                        data: [
-                            ['JS', .56 , '#ff7676'],
-                            ['JQuery', .46 , '#ff7676'],
-                            ['HTML', .50 , '#ff7676'],
-                            ['CSS', .60 , '#ff7676'],
-                            ['Vue', .35 , '#ff7676']
-                        ],
-                        css: {
-                            top: 200,
                             opacity: 0
                         },
-                        animateIn: {  // 组件载入时样式
-                            opacity: 1,
-                            top: 200
-                        },
-                        animateOut: {  // 组件载出时样式
-                            opacity: 0,
-                            top: 180
-                        },
                         center: true
                     })
+
+
             .addPage()
                     .addComponent('caption', {
                         text: '水平柱图'
@@ -300,6 +239,96 @@
                         },
                         center: true
                     })
+
+            .addPage()
+                    .addComponent('caption', {
+                        text: '折线图'
+                    }) // polyline
+                    .addComponent('polyline', {
+                        type: 'polyline',
+                        width: 630,
+                        height: 400,
+                        data: [
+                            ['JS', .56 , '#ff7676'],
+                            ['JQuery', .46 , '#ff7676'],
+                            ['HTML', .50 , '#ff7676'],
+                            ['CSS', .60 , '#ff7676'],
+                            ['Vue', .35 , '#ff7676'],
+                            ['Angular', .4 , '#ff7676']
+                        ],
+                        css: {
+                            top: 180,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '雷达图'
+                    })   // radar
+                    .addComponent('radar', {
+                        type: 'radar',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JS', .56 , '#ff7676'],
+                            ['JQuery', .46 , '#ff7676'],
+                            ['HTML', .50 , '#ff7676'],
+                            ['CSS', .60 , '#ff7676'],
+                            ['Vue', .35 , '#ff7676']
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
+            .addPage()
+                    .addComponent('caption', {
+                        text: '饼图'
+                    })  // pie
+                    .addComponent('pie', {
+                        type: 'pie',
+                        width: 400,
+                        height: 400,
+                        data: [
+                            ['JS', .05],
+                            ['Angular', .35],
+                            ['JQuery', .1],
+                            ['HTML', .2],
+                            ['CSS', .1],
+                            ['Vue', .2]
+                        ],
+                        css: {
+                            top: 200,
+                            opacity: 0
+                        },
+                        animateIn: {  // 组件载入时样式
+                            opacity: 1,
+                            top: 200
+                        },
+                        animateOut: {  // 组件载出时样式
+                            opacity: 0,
+                            top: 180
+                        },
+                        center: true
+                    })
             .addPage()
                     .addComponent('caption', {
                         text: '环形图'
@@ -330,7 +359,7 @@
                         width: 150,
                         height: 150,
                         data: [
-                            ['HTML', .8, '#ff7676']
+                            ['HTML', .8, '#4dfb70']
                         ],
                         css: {
                             top: 350,
@@ -353,7 +382,7 @@
                         width: 150,
                         height: 150,
                         data: [
-                            ['CSS', .4, '#ff7676']
+                            ['CSS', .6, '#99c1ff']
                         ],
                         css: {
                             top: 350,
@@ -374,7 +403,7 @@
                         width: 150,
                         height: 150,
                         data: [
-                            ['HTML', .8, '#ff7676']
+                            ['JQuery', .7, '#ffc447']
                         ],
                         css: {
                             top: 350,
@@ -391,32 +420,6 @@
                             right: 0,
                             top: 350
                         }
-                    })
-            .addPage()
-                    .addComponent('caption', {
-                        text: '散点图'
-                    })  // point
-                    .addComponent('point', {
-                        type: 'point',
-                        width: 200,
-                        height: 200,
-                        data: [
-                            ['JS', .4 , 'green'],
-                            ['CSS', .3 , 'red','-10%' ,'120%'],
-                            ['HTML', .2 , 'yellow','-5%','-60%'],
-                            ['???', .22 , '#3456ff','100%','-60%']
-                        ],
-                        css: {
-                            top: 200,
-                            opacity: 0
-                        },
-                        animateIn: {  // 组件载入时样式
-                            opacity: 1
-                        },
-                        animateOut: {  // 组件载出时样式
-                            opacity: 0
-                        },
-                        center: true
                     })
             .addPage('tail')
                     .addComponent('slogan', {
@@ -449,7 +452,7 @@
                         }
                     })
 
-                    .load()
+                    .load(8)
         });
     </script>
 

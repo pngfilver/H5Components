@@ -71,7 +71,7 @@ var H5 = function() {
         return this;
     };
     // H5对象初始化呈现
-    this.load = function(firsrPage) {
+    this.loader = function(firstPage) {
 
         this.ele.fullpage({
             onLeave: function(index, nextIndex, direction) {
@@ -84,10 +84,12 @@ var H5 = function() {
         this.page[0].find('.h5_component').trigger("onLoad");
         this.ele.show();
 
-        if(firsrPage) {
-            $.fn.fullpage.moveTo(firsrPage);
+        if(firstPage) {
+            $.fn.fullpage.moveTo(firstPage);
         }
     };
+    // 初始化 this.loader
+    this.loader = (typeof H5_loading == 'function') ? H5_loading : this.loader;
 
     return this;
 };

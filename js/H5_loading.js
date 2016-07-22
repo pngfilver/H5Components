@@ -6,7 +6,7 @@ var H5_loading = function(images, firstPage) {
     var id = this.id;  // H5对象中通过随机变量生成的id
 
     if(!this._images) {
-      
+
         this._images = (images||[]).length;
         this.loaded = 0;
 
@@ -21,13 +21,13 @@ var H5_loading = function(images, firstPage) {
             };
             img.src = item; // 可以直接把图片载入到缓存中
         }
-        $('.rate').text('0%');
+        $('.loading-rate').text('0%');
 
         return this;
     }else {
 
         this.loaded ++ ;
-        $('.rate').text( ( (this.loaded/this._images * 100) >> 0 ) + '%' );
+        $('.loading-rate').text( ( (this.loaded/this._images * 100) >> 0 ) + '%' );
 
         if( this.loaded < this._images ) {
 

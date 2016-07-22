@@ -11,7 +11,7 @@ body {
     top: 50%;
     margin: -30px auto;
 }
-.loading .rate {
+.loading .loading-rate {
     width: 100%;
     font-size: 16px;
     text-align: center;
